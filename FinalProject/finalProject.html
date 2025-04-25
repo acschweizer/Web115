@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB-115 Final Project</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f9;
+                color: #333;
+            }
+
+            #banner {
+                background-color: #4CAF50;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            #banner h1 {
+                margin: 0;
+                font-size: 2.5em;
+            }
+
+            #banner p {
+                font-size: 1.2em;
+                margin: 0.5em 0;
+            }
+
+            form {
+                width: 80%;
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                text-align: center;
+                color: #4CAF50;
+            }
+
+            .form-row {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 1em;
+            }
+
+            label {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                font-size: 1em;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            button {
+                background-color: #4CAF50;
+                color: white;
+                font-size: 1.1em;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+            #mealTable {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            #mealTable th, #mealTable td {
+                padding: 12px;
+                text-align: center;
+                border: 1px solid #ddd;
+            }
+
+            #mealTable th {
+                background-color: #f2f2f2;
+            }
+
+            #clearbtn {
+                background-color: #f44336;
+                margin-left: 10px;
+            }
+
+            #clearbtn:hover {
+                background-color: #e53935;
+            }
+
+            /* Responsive design */
+            @media screen and (max-width: 600px) {
+                body {
+                    padding: 10px;
+                }
+
+                form {
+                    width: 100%;
+                    padding: 15px;
+                }
+
+                #mealTable th, #mealTable td {
+                    padding: 8px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id='banner'>
+            <h1>Build A Meal Plan</h1>
+            <p>Aiden - WEB-115 - Section-0004</p>
+        </div>
+        <form id="mealForm">
+            <h2>Personal Information</h2>
+
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName"><br><br>
+
+            <label for="userEmail">Email:</label>
+            <input type="email" id="userEmail" name="userEmail" required><br><br>
+
+            <div class="form-row">
+            <label for="userGoal">Goal for the week:</label>
+            <textarea id="userGoal" name="userGoal" rows="4" cols="50"></textarea><br><br>
+            </div>
+            <h2>Weekly Meal Plan</h2>
+<table id="mealTable">
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Breakfast</th>
+            <th>Snack 1</th>
+            <th>Lunch</th>
+            <th>Snack 2</th>
+            <th>Dinner</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Monday</td>
+            <td><input type="text" name="monBreakfast"></td>
+            <td><input type="text" name="monSnack1"></td>
+            <td><input type="text" name="monLunch"></td>
+            <td><input type="text" name="monSnack2"></td>
+            <td><input type="text" name="monDinner"></td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td><input type="text" name="tueBreakfast"></td>
+            <td><input type="text" name="tueSnack1"></td>
+            <td><input type="text" name="tueLunch"></td>
+            <td><input type="text" name="tueSnack2"></td>
+            <td><input type="text" name="tueDinner"></td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td><input type="text" name="wedBreakfast"></td>
+            <td><input type="text" name="wedSnack1"></td>
+            <td><input type="text" name="wedLunch"></td>
+            <td><input type="text" name="wedSnack2"></td>
+            <td><input type="text" name="wedDinner"></td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td><input type="text" name="thuBreakfast"></td>
+            <td><input type="text" name="thuSnack1"></td>
+            <td><input type="text" name="thuLunch"></td>
+            <td><input type="text" name="thuSnack2"></td>
+            <td><input type="text" name="thuDinner"></td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td><input type="text" name="friBreakfast"></td>
+            <td><input type="text" name="friSnack1"></td>
+            <td><input type="text" name="friLunch"></td>
+            <td><input type="text" name="friSnack2"></td>
+            <td><input type="text" name="friDinner"></td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td><input type="text" name="satBreakfast"></td>
+            <td><input type="text" name="satSnack1"></td>
+            <td><input type="text" name="satLunch"></td>
+            <td><input type="text" name="satSnack2"></td>
+            <td><input type="text" name="satDinner"></td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td><input type="text" name="sunBreakfast"></td>
+            <td><input type="text" name="sunSnack1"></td>
+            <td><input type="text" name="sunLunch"></td>
+            <td><input type="text" name="sunSnack2"></td>
+            <td><input type="text" name="sunDinner"></td>
+        </tr>
+    </tbody>
+</table>
+<div style="margin-top: 1.5em;">
+    <button type="submit" id="submitbtn">Submit</button>
+    <button type="button" id="clearbtn">Clear All</button>
+</div>
+        </form>
+        <script src="projectJS.js"></script>
+    </body>
+</html>
